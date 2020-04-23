@@ -29,6 +29,8 @@ function loadSongs()
     }
 }
 
+// function credits to https://github.com/NelsWebDev/HTML5AudioPlaylist.git
+
 function audioPlayer(){
     var currentSong = 0;
     $("#audioPlayer")[0].src = $("#playlist li a")[0];
