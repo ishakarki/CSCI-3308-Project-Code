@@ -1,0 +1,40 @@
+{% extends 'music/base.html' %}
+
+{% block title %}Album Details{%endblock%}
+
+{% block body %}
+	<div class="w3-card-4">
+		<img src="{{ album.album_logo }}" style = "width: 250px; height: 250px;">
+
+		<h1>{{album.album_title}}</h1>
+		<h3>{{album.artist}}</h3>
+	</div>
+
+	{%if error_message %}
+		<p><strong>{{ error_message }}</strong></p>
+	{% endif %}
+
+	{% csrf_token %}<!-- -->
+	<div class="w3-card-2">
+	{% for song in album.song_set.all %}
+		<label for="song{{ forloop.counter }}"><!-- -->
+		<form action = "{%url 'music:addqueue' album.id %}" method = "post" style ="display: inline;">
+			{% csrf_token %}
+			<input type ="radio" id="song{{ forloop.counter }}" name ="song" value ="{{ song.id }}"><!-- -->
+			<input type = "hidden" name ="play" value = "{{ song.id }}"/>
+			<button type = "submit" class = "btn btn-default btn-sm">
+				<span class = "glyphicon glyphicon-plus-sign"></span>
+			</button>
+		</form>
+
+		
+		{{song.song_title}}
+		<!-- addQueue-->
+		{%if song.is_upvote%}
+		{%endif%}
+		
+		</label><br><!-- -->
+		{%endfor%}
+	</div>
+
+{% endblock %}

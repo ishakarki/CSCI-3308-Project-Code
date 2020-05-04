@@ -35,8 +35,16 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+<<<<<<< HEAD:shaux_new/settings.py
     'blog.apps.BlogConfig', # adding the application
     'users.apps.UsersConfig',
+=======
+
+    'users.apps.UsersConfig',
+
+
+    'music.apps.MusicConfig',
+>>>>>>> full django app:demoapp/settings.py
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -125,4 +133,14 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+<<<<<<< HEAD:shaux_new/settings.py
 LOGIN_REDIRECT_URL = 'blog-home'
+=======
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+
+LOGIN_REDIRECT_URL = 'homepage'
+>>>>>>> full django app:demoapp/settings.py

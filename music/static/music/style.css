@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Manrope&display=swap');
+
+body{
+    /* background-color: #D94848; */
+    padding-top: 0in;
+    padding-bottom: 1in;
+    margin: auto;
+    text-align: center;
+    font-family: "Manrope";
+    background: white url("images/background.jpg");
+    background-size: cover;
+}
+
+.w3-card-4 {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin: auto;
+    margin-top: 1cm;
+    margin-bottom: 1cm;
+    width: fit-content;
+    background-color: white;
+    color: black;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .w3-card-4:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+.w3-card-2 {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin: auto;
+    margin-top: 1cm;
+    margin-bottom: 1cm;
+    width: fit-content;
+    text-align: justify;
+    text-justify: inter-word;
+    background-color: white;
+    color: black;
+}
+
+.navbar{
+    border-radius: 0;
+}
+
+.navbar-brand{
+    font-family: 'Satisfy', cursive;
+
+}

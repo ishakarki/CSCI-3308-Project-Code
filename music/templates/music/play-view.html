@@ -1,0 +1,12 @@
+{%extends 'music/base.html'%}
+<p>Audio Title: {{ aud.title }}</p>
+<hr>
+<audio controls>
+<source src="{{ aud.audio_file }}" type="audio/mp3">
+</audio>
+<hr>
+<p>Audio Description: {{ aud.description }}</p>
+
+{% block body %}
+
+{%endblock%}

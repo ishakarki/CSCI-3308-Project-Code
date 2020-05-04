@@ -1,0 +1,41 @@
+{% extends 'music/base.html' %}
+
+
+{% block body %}
+
+  </head>
+ <script> songs += "{{song.mp3}}" </script>
+
+
+
+
+<h1>Queue</h1>
+<ul>		
+		{% for song in all_songs %}	
+
+		    <div>
+		      <div class="w3-card-4">
+		        <img src="{{song.album.album_logo}}" alt="album" style="width: 100px; height: 100px;">
+		        <div class="w3-container w3-center">
+		          <p id="title">{{song.song_title}} - {{song.album.artist}}</p> 
+		        </div>
+		      </div>
+		    </div>
+		
+		    <audio controls="controls" preload="auto" src="{{song.mp3}}"> <em>Your browser does not support the audio element.</em> 
+		    </audio>
+		 
+		    <script>
+		      // loads the audio player
+		      loadSongs();
+		      audioPlayer();
+		    </script>
+			
+
+		{% endfor %}
+</ul>
+
+
+
+</html>
+{% endblock %}
